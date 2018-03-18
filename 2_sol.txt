@@ -1,0 +1,41 @@
+function multVisit(str){
+     function formatVecToString(x, y){
+	return '('+x+','+y+')';
+     }
+   var firstPlace = formatVecToString(0,0)
+   var visitedOnce = {};
+   visitedOnce[firstPlace]=0;
+   var visitedMult = 0;
+   var currX =0;
+   var currY = 0;
+   var i=0;
+   while(i<str.length){
+       if(str.charAt(i)=='<'){
+	currX --;
+	}
+       if(str.charAt(i)=='>'){
+	currX ++;
+	}
+       if(str.charAt(i)=='^'){
+	currY ++;
+	}
+       if(str.charAt(i)=='v'){
+	currY --;
+	}
+        var currPos = formatVecToString(currX ,currY );
+        
+        if(visitedOnce[currPos ]==undefined){
+              //visitedOnce.push(currPos);
+               visitedOnce[currPos ] = 0;
+        }
+        else{
+                   visitedOnce[currPos] ++;
+	if(visitedOnce[currPos ]==1){
+                         visitedMult++;
+                    }
+         }
+       i++;
+   }
+console.log(visitedOnce);
+return visitedMult;
+}

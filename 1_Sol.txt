@@ -1,0 +1,32 @@
+function whichFloor(str){
+	var i = 0;
+	var floor =0;
+	while(i<str.length){
+		if(str.charAt(i)=='('){
+		floor++;
+		}
+		if(str.charAt(i)==')'){
+		floor--;
+		}
+		i++;
+	}
+return floor;
+}
+
+running------
+
+var run = function whichFloor(str){
+	var i = 0;
+	var floor =0;
+	while(i<str.length){
+		if(str.charAt(i)=='('){
+		floor++;
+		}
+		if(str.charAt(i)==')'){
+		floor--;
+		}
+		i++;
+	}
+return floor;
+}
+run(input string)
