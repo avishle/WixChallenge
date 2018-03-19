@@ -4,7 +4,7 @@ function multVisit(str){
      }
    var firstPlace = formatVecToString(0,0)
    var visitedOnce = {};
-   visitedOnce[firstPlace]=0;
+   visitedOnce[firstPlace]=1;
    var visitedMult = 0;
    var currX =0;
    var currY = 0;
@@ -26,16 +26,16 @@ function multVisit(str){
         
         if(visitedOnce[currPos ]==undefined){
               //visitedOnce.push(currPos);
-               visitedOnce[currPos ] = 0;
+               visitedOnce[currPos ] = 1;
         }
         else{
-                   visitedOnce[currPos] ++;
+                  
 	if(visitedOnce[currPos ]==1){
-                         visitedMult++;
+                         visitedMult++;  visitedOnce[currPos ] = 2;
                     }
          }
        i++;
    }
-console.log(visitedOnce);
-return visitedMult;
+console.log(visitedMult);
 }
+multVisit(">^>><^<^^>><>^v<>vv>>>v^>^<v>>^<><>^v^>vvvv^<^vv<><^v>^^><>vv^v><><<<v>v<<<<<><>^><^><^<vv^v<v<vvvv<><<^<>^<>^<^>>^<>>><>vv<v<>>v<^>>>>v<vv>^<>><^^<<v^<>>^vv^^<>>^^><<<><>v^^<^^<<>>vv<^^<<<v<vv<vv<>vvv<v<<vv^>><>>vv<vvv><>vvv>^<<<^^<^v>v>>^v<v^^vvv<>^vv<^<<^vv>^^^vv>v<>^v^>^v>^>^vv^^>v<>><><<<v>>^vv>v^v<>v^v>>^^>v^^<vv^v>>v^<v^v<<^^>>>v<>>^^><>v^^^<v>>^>v^^<v<v<<<v>^>>>v<v^<v>v<<>v^<<^<>v>vv^v<v>vv^^<v^<<v^^<<v^>^^v^><v<^v^<>^><^^^v^<^^><>v>^>v>v^v^^<^^^^<v^^v^>v<><^>^^v^>v><^<v<<^v<<>v<^>v>>^^><^>^>v><vv<v^^><^<v<vv<^^>^^>><>>^<<vvv^v^<<^><^^<^>v^>>>v<vv<v^v<>^<><<><>^<><<^<><vv^v<^vvvvv<v>^^>v>>v<^>v<v<<v^^<<^>>^<>>><<>^v^<^^<v^^^<^<><>^><v^^>v^<^>>v><>>>>^<^^<<v>^<<v<^v>vv<>^>^><^v^v^<>>v<v<^^v^>^><^v^<<<><>^<vvvv<<v>^^v>>vv>>^^^vv>^>v<^>>vv>>><v^<^^>><>v<^vvv<^v<<vv><^<>v^v^>^v>><^<><v>^v^^^>vv>>v^>v<^>^>vv>>>^<><^<<^<>v>>>vv<v^<^vv>><<><<><vv<v>^>>v^v^^>^><vvv>^^^v>>><v<><>>^v<<>v^>><^^v><>^v<^^<<<^v<vv<^v><>><^vvv>^<^vvv^>vv<^v<<^<>^<><>>><<^>>^>^vv>><<v<v<<>>^>v>^>^^>v^^^^>^<<><><v><^<<^<v>><^><v^><>^v^<v^^v>^<>><^>>^^vvvv^^^v^v>v^<v>v>^><^vv><<v<><<<>v<^vv<>>^><v><^>>vvv^<^>v>v>^^^>v^<>v^^<vvv<^^^vv<^vv>>>>v^^><<<v<<v><^v<^v<^^<^<>v<vv>^<^<>v^^<v<>>>^^><>^>^>v>v>^<v<><><>><^<v>v^<^^<v^v^vv>^>>^^^^>v>vv^>>>vvv<<^>>vv^^^v>vvv>^^v<<>^v<v^<^^^>>v^><><>vv<<<^<v<>v><v^^v><>>^>^>vv^v>^<>v>>><><<<<v<>vv<^v><>>^^<vv<vv<><<<^<v^<v<^<><^^<>>v<>><^^^<v<><>^>vv^v^<<^v^^^<<v>^vvv<<<v>>^^>^><><>><>vv<^<>^<v^^v>v>^v<^>^<v<>>^v^^^^><^^vv>>><<>><^<vv^^^>^>v<^>^v><<vvv^<<^<>><>><<<<v>v>^<vv>^>v^<>^v<^^v<>>><^v><v<<vv<<v^<v>>vvv>vvv^<vv<<><<^<<<^<<v<>vv<><>>><^<<^vv^^^^^v^>^^^>v>^v>>><^v")
